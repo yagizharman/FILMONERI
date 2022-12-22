@@ -1,0 +1,3 @@
+pip freeze > requirements.txt
+pip install pandas
+streamlit run main.py

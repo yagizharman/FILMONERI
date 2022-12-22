@@ -1,0 +1,1 @@
+web: sh setup.sh && streamşit run app.py
