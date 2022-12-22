@@ -4,11 +4,13 @@ import requests
 import pandas as pd
 
 
+
 class data_funcs():
 
     similarity = pickle.load(open('similarity.pkl', 'rb'))
     movies_dict = pickle.load(open('movie_dict.pkl', 'rb'))
     movies = pd.DataFrame(movies_dict)
+
 
     def fetch_poster(movie_id):
         response =requests.get("https://api.themoviedb.org/3/movie/{}?api_key=8129fb7a3e656527e4b5404fa3ca8a95&language=en-US".format(movie_id))
@@ -65,5 +67,15 @@ class app():
                 st.text(names[4])
                 st.image(posters[4])
 
-app.interface_init(self=1)
-app.application_reel(self=1)
+class main:
+    def run_app(self):
+        app.interface_init(self=1)
+        app.application_reel(self=1)
+
+
+
+main.run_app(self=1)
+
+
+
+
